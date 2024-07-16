@@ -26,6 +26,7 @@
 
     <Button
         android:text="Login"
+        android:id="@+id/login_register"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
         android:layout_width="match_parent"
