@@ -1,14 +1,17 @@
 package com.example.loginregister.ui.theme.fragments
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.loginregister.R
 import com.example.loginregister.ui.theme.LoginViewModel
+import com.example.loginregister.ui.theme.NewActivity
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,6 +52,15 @@ class LoginFragment : Fragment() {
             loginbtn.text="Login"
         }else{
             loginbtn.text="Register"
+        }
+
+        loginbtn.setOnClickListener {
+            val intent = Intent(
+                activity,
+                NewActivity::class.java
+            )
+            startActivity(intent)
+
         }
         return view
     }
